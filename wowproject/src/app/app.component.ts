@@ -7,9 +7,15 @@ import { FormsModule } from '@angular/forms'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'wowproject';
-  name: string = 'Илья';
-  age: number = 16;
+   clicks: number = 0;
+   onChanged(increased) {
+     if (increased) {
+       this.clicks = this.clicks + 1;
+     } 
+     else {
+       this.clicks = this.clicks - 1;
+     }
+   }
 }
 
 
