@@ -8,9 +8,8 @@ import { FormsModule } from '@angular/forms'
 })
 export class AppComponent {
   title = 'wowproject';
-  name='Илья';
+  name: string = 'Илья';
+  age: number = 16;
 }
 
-export class ChildComponent {
-  name="Imya";
-}
+
