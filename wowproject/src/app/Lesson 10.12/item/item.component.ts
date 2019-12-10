@@ -9,10 +9,20 @@ import { Subscription } from 'rxjs';
 })
 export class ItemComponent implements OnInit {
  id: number;
- sub: Subscription; /*Изменение параметров маршрута */
+ product: string;
+ price: string;
+ subR: Subscription; /*Изменение параметров маршрута */
+ subQ: Subscription;
  constructor(private activeRoute: ActivatedRoute) {
    //this.id = activeRoute.snapshot.params["id"];
-   this.sub = activeRoute.params.subscribe( params => this.id = params['id'] );
+   this.subR = activeRoute.params.subscribe( params => this.id = params['id']
+   );
+   this.subQ = activeRoute.queryParams.subscribe(
+     (queryParam) => {
+   this.product = queryParam['product'];
+   this.price = queryParam['price'];
+  }
+  );
   }
 
   ngOnInit() {
