@@ -17,6 +17,14 @@
             <a [routerLink]="['item', '8']"
                [queryParams]="{'product': 'tablet'}">Item 8</a>
         </li>
+        <li routerLinkActive="active">
+                <a [routerLink]="['item', '8', 'details']"
+                   [queryParams]="{'product': 'tablet'}">Детали</a>
+            </li>
+            <li routerLinkActive="active">
+                    <a [routerLink]="['item', '8', 'stat']"
+                       [queryParams]="{'product': 'tablet'}">Статистика</a>
+                </li>
     </ul>
     <router-outlet></router-outlet>
     <button (click)="goHome()">На главную</button>
