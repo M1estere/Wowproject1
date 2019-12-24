@@ -1,0 +1,10 @@
+.par{
+    border: 4px solid black;
+    background: red;
+    padding: 8px;
+    border-radius: 30px;
+}
+.bye{
+    border-color: blue;
+    
+}
