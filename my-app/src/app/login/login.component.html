@@ -1,10 +1,14 @@
 <div>
     <form (ngSubmit)="MakeLogin()">
-        <input type="text" placeholder="Ваш логин"[(ngModel)]="login" name="login"><br>
-        <input type="password" placeholder="Ваш пароль" [(ngModel)]="password" name="password"><br>
-        <input type="submit" value="Войти">
+    <input type="text" placeholder="Город"[(ngModel)]="login" name="login"><br>
+    <input type="text" placeholder="Страна" [(ngModel)]="password" name="password"><br>
+    <input type="submit" value="Добавить"  (click)='do(login, password )'>
     </form>
     <div *ngIf="entered">
-      <h1>Вы вошли</h1>
+      <h1>Новый город</h1>
+    </div>
+    <div *ngFor="let item of items">
+      Город: {{item.city}}
+      Страна: {{item.country}}
     </div>
 </div>

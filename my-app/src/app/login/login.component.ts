@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +11,13 @@ export class LoginComponent implements OnInit {
  entered: boolean;
   constructor() { }
 
+
+  items= []
+  do(NewCity, NewCountry){
+    this.items.push({city: NewCity, country: NewCountry})
+  }
+                                                                  
+ 
   ngOnInit() {
     this.login = "admin1";
     this.password = "admin1";
@@ -42,11 +48,7 @@ export class LoginComponent implements OnInit {
     }
     }
   }
-
-
-
-
-
+      
 
 
 
